@@ -16,3 +16,13 @@
  1 3 3 1
 where each element of each row is either 1 or the sum of the two elements right above it.
 
+```python
+def pascal(n):
+    """ Prints n rows of pascal's triangle"""
+    row = [1]
+    k = [0]
+    for x in range(max(n, 0)):
+        print row
+        row = [l + r for l, r in zip(row + k, k + row)]
+    return n >> 1
+```
