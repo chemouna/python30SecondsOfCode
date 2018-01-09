@@ -1,7 +1,12 @@
+def egcd(a, b):
+    x, y, u, v = 0, 1, 1, 0
+    while a != 0:
+        q, r = b // a, b % a
+        m, n = x - u * q, y - v * q
+        b, a, x, y, u, v = a, r, u, v, m, n
 
-def extendedEuclidean(a, b):
-    if abs(a) < abs(b):
-        (x, y, d) = extendedEuclidean(b, a)
-        return y, x, d
+    gcd = b
+    return gcd, x, y
 
-    
+
+print egcd(1914, 899)

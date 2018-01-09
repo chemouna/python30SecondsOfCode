@@ -3,7 +3,8 @@
 ## Table of Contents
 
 ### Math
-* [`gcd`](#gcd)
+* [`Gcd`](#gcd)
+* [`Extended Gcd`](#extendedgcd)
 * [`Pascal Triangle`](#pascaltriangle)
 
 ### Graphs
@@ -11,7 +12,31 @@
 
 [⬆ back to top](#table-of-contents)
 ## Math
+### Gcd
+```python
+def gcd(a, b):
+    if abs(a) < abs(b):
+        gcd(b, a)
 
+    while b > 0:
+        q, r = divmod(a, b)
+        a, b = b, r
+
+    return a
+```
+
+### Extended Gcd
+```python
+def egcd(a, b):
+    x, y, u, v = 0, 1, 1, 0
+    while a != 0:
+        q, r = b // a, b % a
+        m, n = x - u * q, y - v * q
+        b, a, x, y, u, v = a, r, u, v, m, n
+
+    gcd = b
+    return gcd, x, y
+```
 ### Pascal Triangle
     1
    1 1
