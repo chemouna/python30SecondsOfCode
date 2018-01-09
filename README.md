@@ -4,15 +4,14 @@
 
 ### Math
 * [`gcd`](#gcd)
-* [`Euler's totient function phi(m)`](#euler-totient-function)
-* [`Happy Numbers`](#happy-numbers)
-* [`Sierpinski Triangle`](#sierpinski-triangle)
+* [`Pascal Triangle`](#pascaltriangle)
 
 ### Graphs
 * [`DFS`](#dfs)
 
 [⬆ back to top](#table-of-contents)
 ## Math
+
 ### Pascal Triangle
     1
    1 1
